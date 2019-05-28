@@ -16,8 +16,7 @@ namespace Magneto.Main
         public static IMagnetoForm CreateForm(Uri url)
         {
             BrowserFixer.FixSettingsIfNeeded();
-            var platform = GetPlatform();
-            var app = new Application(platform);
+            var app = new Application(GetPlatform());
             return new MagnetoForm(app, url);
         }
 

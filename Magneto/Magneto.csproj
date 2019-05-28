@@ -5,7 +5,7 @@
     <Version>0.4.0</Version>
     <Authors>Integrative Software LLC</Authors>
     <Company>Integrative Software LLC</Company>
-    <Description>Magneto is a web app container. It's a cross-platform C# alternative to electron that uses a native browser on each OS without the need for NodeJS/NPM or Cef.</Description>
+    <Description>Magneto is a web app container based on the Eto library. It's a cross-platform C# alternative to electron that uses a native browser on each OS without the need for NodeJS/NPM or Cef.</Description>
     <Copyright>Copyright (c) 2019 Integrative Software LLC</Copyright>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
@@ -17,14 +17,10 @@
   <ItemGroup>
     <PackageReference Include="Eto.Forms" Version="2.4.1" />
     <PackageReference Include="Eto.Platform.Gtk" Version="2.4.1" />
+    <PackageReference Include="Eto.Platform.Mac64" Version="2.4.1" />
     <PackageReference Include="Eto.Platform.Wpf" Version="2.4.1" />
-    <PackageReference Include="Eto.Platform.XamMac2" Version="2.4.1" />
     <PackageReference Include="Microsoft.Win32.Registry" Version="4.5.0" />
     <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
 
 </Project>

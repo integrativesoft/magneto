@@ -49,23 +49,23 @@ namespace Magneto.Main
 
         private static void FixPrehistoricModeIfNeeded()
         {
-            if (GetBrowserFeatureValue(FeatureEmulation) != EmulationKeyValue)
+            if (GetFeatureValue(FeatureEmulation) != EmulationKeyValue)
             {
-                SetBrowserFeature(FeatureEmulation, EmulationKeyValue, RegistryValueKind.DWord);
+                SetFeatureValue(FeatureEmulation, EmulationKeyValue, RegistryValueKind.DWord);
             }
         }
 
         private static void FixDpiIfNeeded()
         {
-            if (GetBrowserFeatureValue(FeatureDpi) != DpiKeyValue)
+            if (GetFeatureValue(FeatureDpi) != DpiKeyValue)
             {
-                SetBrowserFeature(FeatureDpi, DpiKeyValue, RegistryValueKind.DWord);
+                SetFeatureValue(FeatureDpi, DpiKeyValue, RegistryValueKind.DWord);
             }
         }
 
-        private static int GetBrowserFeatureValue(string keyName)
+        private static int GetFeatureValue(string keyName)
         {
-            using (var key = Registry.CurrentUser.OpenSubKey(keyName, true))
+            using (var key = Registry.CurrentUser.OpenSubKey(keyName, false))
             {
                 if (key != null)
                 {
@@ -77,7 +77,7 @@ namespace Magneto.Main
             }
         }
 
-        private static void SetBrowserFeature(string feature, object value, RegistryValueKind kind)
+        private static void SetFeatureValue(string feature, object value, RegistryValueKind kind)
         {
             var programName = GetProgramName();
             using (var parent = Registry.CurrentUser.OpenSubKey(BaseRegistryKey, true))
