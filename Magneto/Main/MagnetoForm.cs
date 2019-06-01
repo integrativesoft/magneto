@@ -7,7 +7,6 @@ Author: Pablo Carbonell
 using Eto.Forms;
 using System;
 using System.Drawing;
-using System.Runtime.InteropServices;
 
 namespace Magneto.Main
 {
@@ -17,6 +16,8 @@ namespace Magneto.Main
 
         public MagnetoForm(Application app, Uri url)
         {
+            MinimumSize = new Eto.Drawing.Size(800, 600);
+            Size = MinimumSize;
             _app = app;
             var browser = new WebView
             {
@@ -41,7 +42,7 @@ namespace Magneto.Main
             }
         }
 
-        public bool CenterOnShow { get; set; }
+        public bool CenterOnShow { get; set; } = true;
 
         Point IMagnetoForm.Location
         {
@@ -66,6 +67,12 @@ namespace Magneto.Main
 
         public Form EtoForm => this;
 
+        Point IMagnetoForm.MinimumSize
+        {
+            get => new Point(MinimumSize.Height, MinimumSize.Width);
+            set => MinimumSize = new Eto.Drawing.Size(value.X, value.Y);
+        }
+
         public void RunApplication()
         {
             _app.Run(this);
@@ -74,6 +81,11 @@ namespace Magneto.Main
         public void SetIcon(Icon icon)
         {
             Icon = CommonTools.IconToEto(icon);
+        }
+
+        public bool ConfirmClose(ConfirmCloseOptions options)
+        {
+            return AreYouSureForm.Run(this, options);
         }
     }
 }

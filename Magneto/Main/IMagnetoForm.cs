@@ -17,11 +17,12 @@ namespace Magneto.Main
         Minimized
     }
 
-    public interface IMagnetoForm
+    public interface IMagnetoForm : IDisposable
     {
         void SetIcon(Icon icon);
         Point Location { get; set; }
         Point Size { get; set; }
+        Point MinimumSize { get; set; }
         bool Maximizable { get; set; }
         bool Minimizable { get; set; }
         double Opacity { get; set; }
@@ -39,6 +40,8 @@ namespace Magneto.Main
         event EventHandler<EventArgs> LocationChanged;
         event EventHandler<EventArgs> WindowStateChanged;
         event EventHandler<EventArgs> LogicalPixelSizeChanged;
+
+        bool ConfirmClose(ConfirmCloseOptions options);
 
         void RunApplication();
     }

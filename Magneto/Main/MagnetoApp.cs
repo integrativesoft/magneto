@@ -4,10 +4,8 @@ Created: 5/2019
 Author: Pablo Carbonell
 */
 
-using Eto;
 using Eto.Forms;
 using System;
-using System.Runtime.InteropServices;
 
 namespace Magneto.Main
 {
@@ -15,25 +13,13 @@ namespace Magneto.Main
     {
         public static IMagnetoForm CreateForm(Uri url)
         {
-            BrowserFixer.FixSettingsIfNeeded();
-            var app = new Application(GetPlatform());
-            return new MagnetoForm(app, url);
+            return CreateForm(url, new Application());
         }
 
-        private static Platform GetPlatform()
+        public static IMagnetoForm CreateForm(Uri url, Application app)
         {
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-            {
-                return new Eto.Wpf.Platform();
-            }
-            else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-            {
-                return new Eto.Mac.Platform();
-            }
-            else
-            {
-                return new Eto.GtkSharp.Platform();
-            }
+            BrowserFixer.FixSettingsIfNeeded();
+            return new MagnetoForm(app, url);
         }
     }
 }

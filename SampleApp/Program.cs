@@ -1,20 +1,49 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
+﻿/*
+Copyright (c) 2019 Integrative Software LLC
+Created: 5/2019
+Author: Pablo Carbonell
+*/
+
+using Integrative.Lara;
+using Magneto.Main;
+using System;
 
 namespace SampleApp
 {
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
+        [STAThread]
+        static void Main()
         {
-            CreateHostBuilder(args).Build().Run();
+            // create home page
+            LaraUI.Publish("/", () => new KitchenSinkForm());
+
+            // start web server
+            var host = LaraUI.StartServer().Result;
+
+            // get address (default setting is to assign a dynamic port)
+            string address = LaraUI.GetFirstURL(host);
+
+            // run application
+            using (var session = MagnetoApp.CreateForm(new Uri(address)))
+            {
+                ConfigureConfirmExit(session);
+                session.RunApplication();
+            }
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+        private static void ConfigureConfirmExit(IMagnetoForm session)
+        {
+            session.Closing += (sender, args) =>
+            {
+                args.Cancel = !session.ConfirmClose(new ConfirmCloseOptions
                 {
-                    webBuilder.UseStartup<Startup>();
+                    Title = "Close and exit",
+                    CancelText = "Stay",
+                    ConfirmText = "Quit",
+                    Message = "Are you sure?"
                 });
+            };
+        }
     }
 }
