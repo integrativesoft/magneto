@@ -8,7 +8,7 @@ using Eto.Drawing;
 using System.IO;
 using System.Reflection;
 
-namespace Magneto.Main
+namespace Integrative.Magneto
 {
     static class CommonTools
     {

@@ -9,9 +9,9 @@ using System;
 using System.IO;
 using System.Security;
 
-namespace Magneto.Main
+namespace Integrative.Magneto
 {
-    internal static class IECompatibility
+    static class IECompatibility
     {
         private const string BaseRegistryKey = @"Software\Microsoft\Internet Explorer\Main\FeatureControl\";
 

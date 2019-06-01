@@ -8,7 +8,7 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 
-namespace Magneto.Main
+namespace Integrative.Magneto
 {
     public enum WindowState
     {

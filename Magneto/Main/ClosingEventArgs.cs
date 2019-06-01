@@ -6,7 +6,7 @@ Author: Pablo Carbonell
 
 using System;
 
-namespace Magneto.Main
+namespace Integrative.Magneto
 {
     public class ClosingEventArgs : EventArgs
     {

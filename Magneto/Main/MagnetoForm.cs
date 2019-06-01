@@ -8,7 +8,7 @@ using Eto.Forms;
 using System;
 using System.Drawing;
 
-namespace Magneto.Main
+namespace Integrative.Magneto
 {
     sealed class MagnetoForm : Form, IMagnetoForm
     {

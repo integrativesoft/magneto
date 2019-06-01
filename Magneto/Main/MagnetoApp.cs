@@ -7,7 +7,7 @@ Author: Pablo Carbonell
 using Eto.Forms;
 using System;
 
-namespace Magneto.Main
+namespace Integrative.Magneto
 {
     public static class MagnetoApp
     {

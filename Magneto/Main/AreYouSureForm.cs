@@ -6,7 +6,7 @@ Author: Pablo Carbonell
 
 using Eto.Forms;
 
-namespace Magneto.Main
+namespace Integrative.Magneto
 {
     sealed class AreYouSureForm : Dialog
     {

@@ -4,7 +4,7 @@ Created: 5/2019
 Author: Pablo Carbonell
 */
 
-namespace Magneto.Main
+namespace Integrative.Magneto
 {
     public class ConfirmCloseOptions
     {

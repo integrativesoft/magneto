@@ -5,7 +5,7 @@ Author: Pablo Carbonell
 */
 
 using Integrative.Lara;
-using Magneto.Main;
+using Integrative.Magneto;
 using System;
 
 namespace SampleApp

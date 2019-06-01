@@ -21,6 +21,8 @@ In order to run your Magneto application, you must also install one (or more) of
 - Eto.Platform.XamMac  * requires Visual Studio for Mac
 - Eto.Platform.XamMac2
 </Description>
+    <RootNamespace>Integrative.Magneto</RootNamespace>
+    <AssemblyName>Integrative.Magneto</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

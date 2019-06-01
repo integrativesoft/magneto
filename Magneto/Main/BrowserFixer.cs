@@ -7,7 +7,7 @@ Author: Pablo Carbonell
 using Eto.Forms;
 using System.Runtime.InteropServices;
 
-namespace Magneto.Main
+namespace Integrative.Magneto
 {
     sealed class BrowserFixer
     {
