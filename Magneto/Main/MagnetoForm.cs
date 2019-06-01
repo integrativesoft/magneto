@@ -26,7 +26,7 @@ namespace Integrative.Magneto
             Content = browser;
             Title = "Magneto";
             Load += MagnetoForm_Shown;
-            Icon = CommonTools.LoadIconResource("Magneto.Main.favicon.ico");
+            Icon = CommonTools.LoadIconResource("Integrative.Magneto.Main.favicon.ico");
             new BrowserFixer(browser);
         }
 
