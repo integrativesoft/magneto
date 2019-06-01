@@ -25,14 +25,16 @@ namespace Integrative.Magneto
             };
             Content = browser;
             Title = "Magneto";
-            Load += MagnetoForm_Shown;
+            Load += MagnetoForm_Load;
+            Shown += MagnetoForm_Load;
+            ShowInTaskbar = true;
             Icon = CommonTools.LoadIconResource("Integrative.Magneto.Main.favicon.ico");
             new BrowserFixer(browser);
         }
 
-        private void MagnetoForm_Shown(object sender, EventArgs e)
+        private void MagnetoForm_Load(object sender, EventArgs e)
         {
-            if (CenterOnShow)
+            if (CenterOnShow && Screen != null)
             {
                 Location = new Eto.Drawing.Point
                 {

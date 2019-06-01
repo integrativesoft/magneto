@@ -11,7 +11,6 @@ namespace SampleAppWindows
 {
     class Program
     {
-        [STAThread]
         static void Main()
         {
             ProgramStartup.Main();
