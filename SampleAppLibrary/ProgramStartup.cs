@@ -10,10 +10,9 @@ using System;
 
 namespace SampleApp
 {
-    class Program
+    public static class ProgramStartup
     {
-        [STAThread]
-        static void Main()
+        public static void Main()
         {
             // create home page
             LaraUI.Publish("/", () => new KitchenSinkForm());

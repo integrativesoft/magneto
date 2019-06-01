@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{22166CDD-7B2A-4258-8F17-79A08982F9AF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AssemblyTitle>SampleAppWindows</AssemblyTitle>
+    <Product>SampleAppWindows</Product>
+    <Copyright>Copyright ©  2019</Copyright>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Eto.Platform.Wpf" Version="2.4.1" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SampleAppLibrary\SampleAppLibrary.csproj" />
+  </ItemGroup>
+</Project>

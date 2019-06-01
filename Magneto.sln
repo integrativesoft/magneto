@@ -8,9 +8,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution 
 		Magneto.sln.licenseheader = Magneto.sln.licenseheader
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magneto", "Magneto\Magneto.csproj", "{92BF31B1-D696-4D98-8C8B-2E4DD9E359FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magneto", "Magneto\Magneto.csproj", "{92BF31B1-D696-4D98-8C8B-2E4DD9E359FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "SampleApp\SampleApp.csproj", "{A0E635A6-EB17-40D8-82B6-28B1C057ADE9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Application", "Sample Application", "{AE79A1AC-24AC-457B-BBDC-2886D03E14C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppLibrary", "SampleAppLibrary\SampleAppLibrary.csproj", "{D2BB53F9-58A8-4A6F-8B9D-973517A69D1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleAppWindows", "SampleAppWindows\SampleAppWindows.csproj", "{22166CDD-7B2A-4258-8F17-79A08982F9AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleAppLinux", "SampleAppLinux\SampleAppLinux.csproj", "{1640546B-ABF1-4272-96AC-43D616DEE166}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleAppMacOS", "SampleAppMacOS\SampleAppMacOS.csproj", "{71B2C965-667A-4827-9BBE-7B3B1CBC84EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,13 +30,31 @@ Global
 		{92BF31B1-D696-4D98-8C8B-2E4DD9E359FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92BF31B1-D696-4D98-8C8B-2E4DD9E359FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92BF31B1-D696-4D98-8C8B-2E4DD9E359FD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A0E635A6-EB17-40D8-82B6-28B1C057ADE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0E635A6-EB17-40D8-82B6-28B1C057ADE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0E635A6-EB17-40D8-82B6-28B1C057ADE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0E635A6-EB17-40D8-82B6-28B1C057ADE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2BB53F9-58A8-4A6F-8B9D-973517A69D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2BB53F9-58A8-4A6F-8B9D-973517A69D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2BB53F9-58A8-4A6F-8B9D-973517A69D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2BB53F9-58A8-4A6F-8B9D-973517A69D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22166CDD-7B2A-4258-8F17-79A08982F9AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22166CDD-7B2A-4258-8F17-79A08982F9AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22166CDD-7B2A-4258-8F17-79A08982F9AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22166CDD-7B2A-4258-8F17-79A08982F9AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1640546B-ABF1-4272-96AC-43D616DEE166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1640546B-ABF1-4272-96AC-43D616DEE166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1640546B-ABF1-4272-96AC-43D616DEE166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1640546B-ABF1-4272-96AC-43D616DEE166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71B2C965-667A-4827-9BBE-7B3B1CBC84EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71B2C965-667A-4827-9BBE-7B3B1CBC84EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71B2C965-667A-4827-9BBE-7B3B1CBC84EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71B2C965-667A-4827-9BBE-7B3B1CBC84EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D2BB53F9-58A8-4A6F-8B9D-973517A69D1B} = {AE79A1AC-24AC-457B-BBDC-2886D03E14C7}
+		{22166CDD-7B2A-4258-8F17-79A08982F9AF} = {AE79A1AC-24AC-457B-BBDC-2886D03E14C7}
+		{1640546B-ABF1-4272-96AC-43D616DEE166} = {AE79A1AC-24AC-457B-BBDC-2886D03E14C7}
+		{71B2C965-667A-4827-9BBE-7B3B1CBC84EC} = {AE79A1AC-24AC-457B-BBDC-2886D03E14C7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {623A888D-B724-4164-A84F-40A0468BB481}
