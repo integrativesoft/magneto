@@ -12,11 +12,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magneto", "Magneto\Magneto.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Application", "Sample Application", "{AE79A1AC-24AC-457B-BBDC-2886D03E14C7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppLibrary", "SampleAppLibrary\SampleAppLibrary.csproj", "{D2BB53F9-58A8-4A6F-8B9D-973517A69D1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppCommon", "SampleAppCommon\SampleAppCommon.csproj", "{D2BB53F9-58A8-4A6F-8B9D-973517A69D1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleAppWindows", "SampleAppWindows\SampleAppWindows.csproj", "{22166CDD-7B2A-4258-8F17-79A08982F9AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppWindows", "SampleAppWindows\SampleAppWindows.csproj", "{22166CDD-7B2A-4258-8F17-79A08982F9AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleAppLinux", "SampleAppLinux\SampleAppLinux.csproj", "{1640546B-ABF1-4272-96AC-43D616DEE166}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppLinux", "SampleAppLinux\SampleAppLinux.csproj", "{1640546B-ABF1-4272-96AC-43D616DEE166}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleAppMacOS", "SampleAppMacOS\SampleAppMacOS.csproj", "{71B2C965-667A-4827-9BBE-7B3B1CBC84EC}"
 EndProject

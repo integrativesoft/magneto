@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SampleAppLibrary\SampleAppLibrary.csproj" />
+    <ProjectReference Include="..\SampleAppCommon\SampleAppCommon.csproj" />
   </ItemGroup>
 
 </Project>
